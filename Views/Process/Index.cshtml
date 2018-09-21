@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "O/S Processes";
+    //string[] names = {"Tom", "Bob", "Jane", "Judy"};
+    System.Diagnostics.Process[] p = ViewData["Processes"] as System.Diagnostics.Process[];
+}
+<h2>@ViewData["Title"]</h2>
+<!--h3>@ViewData["Processes"]</h3-->
+
+<p>Use this area to provide additional information.</p>
+
+<ul>
+    @foreach(var item in p) {
+    <li>@item.ProcessName</li>
+    }
+</ul>
